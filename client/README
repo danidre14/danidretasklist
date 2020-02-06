@@ -2,17 +2,18 @@
 {  npm init  }
 [Create package.json file]
 
-2. npm i react react-dom react-dom-router @babel/runtime -- in terminal
-{  npm i react react-dom react-dom-router @babel/runtime  }
+2. npm i react react-dom react-dom-router webpack @babel/runtime -- in terminal
+{  npm i react react-dom react-dom-router webpack @babel/runtime  }
 [
     Install React, DOM, and React Routers for Browsers
+    webpack: so all React code would be compiled/bundled into one file
+             needed in dependency for production
     @babel/runtime: for using async await in production
 ]
 
-3. npm i (--save-dev/-D) webpack webpack-dev-server webpack-cli -- in terminal
-{  npm i --save-dev webpack webpack-dev-server webpack-cli html-webpack-plugin  }
+3. npm i (--save-dev/-D) webpack-dev-server webpack-cli -- in terminal
+{  npm i --save-dev webpack-dev-server webpack-cli html-webpack-plugin  }
 [
-    webpack: so all React code would be compiled/bundled into one file
     webpack-dev-server: for live reloading etc during development
     webpack-cli: allows you to run webpack commands (could be used for build script)
     html-webpack-plugin: would generate build html file
