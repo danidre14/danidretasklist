@@ -1,0 +1,25 @@
+{
+  "name": "task-list",
+  "version": "1.0.0",
+  "description": "",
+  "main": "server.js",
+  "scripts": {
+    "import-all": "npm install && cd client && npm install",
+    "start": "node server.js",
+    "devServer": "nodemon server.js",
+    "devClient": "cd client && npm start",
+    "devStart": "concurrently --kill-others-on-fail \"npm run devServer\" \"npm run devClient\"",
+    "heroku-postbuild": "NPM_CONFIG_PRODUCTION=false npm install --prefix client && npm run build --prefix client"
+  },
+  "author": "",
+  "license": "MIT",
+  "dependencies": {
+    "express": "^4.17.1",
+    "mongoose": "^5.8.9"
+  },
+  "devDependencies": {
+    "concurrently": "^5.0.2",
+    "dotenv": "^8.2.0",
+    "nodemon": "^2.0.2"
+  }
+}

@@ -1,0 +1,80 @@
+*,
+::before,
+::after {
+  box-sizing: border-box;
+}
+
+.tasks {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.task {
+  background: rgb(245, 211, 62);
+  border: solid 1px rgb(45, 46, 6);
+  margin: 10px 0 0 10px;
+  padding: 10px;
+  width: 240px;
+  height: 240px;
+  max-width: 240px;
+  max-height: 240px;
+}
+
+.task input[type="text"],
+.task textarea {
+  background: none;
+  color: rgba(27, 23, 0, 0.623);
+  font-weight: 800;
+  border: none;
+  outline: none;
+}
+
+.task input[type="text"]:focus,
+.task textarea:focus {
+  background: rgba(255, 222, 113, 0.144);
+}
+
+.task input[type="text"]::placeholder,
+.task textarea::placeholder {
+  color: rgba(27, 23, 0, 0.623);
+  font-weight: 800;
+}
+
+.task .task--nav {
+  float: right;
+}
+
+.task .task--delete,
+.task .task--view {
+  background: rgba(27, 23, 0, 0.623);
+  border: none;
+  color: rgb(245, 211, 62);
+  border-radius: 8px;
+  font-size: 22px;
+}
+
+.task .task--delete:hover,
+.task .task--view:hover {
+  background: rgba(90, 77, 6, 0.623);
+  cursor: pointer;
+}
+
+.task .task--view {
+  margin-right: 5px;
+  text-decoration: none;
+}
+
+.task .task--name {
+  font-size: 23px;
+  width: 120px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.task .task--description {
+  font-size: 18px;
+  height: 180px;
+  width: 100%;
+  resize: none;
+}
