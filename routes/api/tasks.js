@@ -4,18 +4,18 @@ const Tasks = require("../../models/tasks");
 
 
 //CORS
-router.use((req, res, next) => {
-  if (req.path !== '/' && !req.path.includes('.')) {
-    res.header({
-      'Access-Control-Allow-Credentials': true,
-      'Access-Control-Allow-Origin': req.headers.origin || '*',
-      'Access-Control-Allow-Headers': 'X-Requested-With',
-      'Access-Control-Allow-Methods': 'PUT,POST,GET,DELETE',
-      'Content-Type': 'application/json; charset=utf-8'
-    })
-  }
-  next();
-})
+// router.use((req, res, next) => {
+//   if (req.path !== '/' && !req.path.includes('.')) {
+//     res.header({
+//       'Access-Control-Allow-Credentials': true,
+//       'Access-Control-Allow-Origin': req.headers.origin || '*',
+//       'Access-Control-Allow-Headers': 'X-Requested-With',
+//       'Access-Control-Allow-Methods': 'PUT,POST,GET,DELETE',
+//       'Content-Type': 'application/json; charset=utf-8'
+//     })
+//   }
+//   next();
+// })
 
 // read all tasks
 router.get("/", async (req, res) => {
